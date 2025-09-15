@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  /* --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono); */
+
+  --font-primary: "Karla", sans-serif;
+  --font-tertiary: "Space Grotesk", sans-serif;
+  --font-secondary: "Boldonse", sans-serif;
+
+  /* Breakpoints (all max-width) */
+  --breakpoint-xxlA: 1440px;
+  --breakpoint-xl: 1279px;
+  --breakpoint-lg: 1028px;
+  --breakpoint-mdxl: 950px;
+  --breakpoint-md: 834px;
+  --breakpoint-sixm: 768px;
+  --breakpoint-xlsm: 550px;
+  --breakpoint-sm: 375px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Karla, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .btn-primary {
+    @apply bg-[#5645F5] duration-[300ms] ease-in-out py-[14px] px-[18px]  text-center cursor-pointer outline-none  text-white text-[14px] font-[500] font-primary leading-[20px] rounded-[4px]  max-sm:w-full;
+  }
+
+  .btn-secondary {
+    @apply bg-[#2A0079] border-[1px] border-[#2A0079] duration-[300ms] ease-in-out py-[14px] px-[18px] text-center  cursor-pointer outline-none font-primary  text-white text-[14px] font-[500] leading-[20px] rounded-[4px]  max-sm:w-full;
+  }
+
+  .container {
+    @apply max-lg:px-6 max-xl:px-12 w-full  px-28 mx-auto max-w-[1980px] h-full;
+  }
+  .max-content {
+    @apply max-w-[1350px] mx-auto h-full w-full;
+  }
+}
